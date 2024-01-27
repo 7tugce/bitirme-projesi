@@ -2,6 +2,7 @@ import React from "react";
 import AntdCalendar from "../../components/AntdCalendar";
 import { Tabs } from "antd";
 import Events from "../../components/Events";
+import Header from "../../components/Header"
 import "./home.css";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
   ];
   return (
     <div>
+    <Header/>
       <Tabs
         defaultActiveKey="1"
         centered

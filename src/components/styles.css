@@ -1,9 +1,13 @@
 /* EVENT JSX  */
-
+.event-page-content{
+          display: inline-flex;
+}
 .event-table{
-          width: 40%;
-          height: 500px;
+          width: 400px;
+          min-height: 500px;
+          height: max-content;
           background-color: #AFC8AD;
+          margin: 30px;
 }
 .event-table-head{
           height: 80px;
@@ -15,7 +19,7 @@
 }
 .event-table-body{
           font-size: 15px;
-          text-align: start;
+          align-items: center;
 }
 .event-info{
           display: inline-flex;
@@ -24,4 +28,19 @@
 }
 .event-table-body div{
           margin-left: 15px;
+          margin-right: 15px;
+         
+}
+.student-info{
+    display: flex;
+          flex-direction: column;       
+}
+.event-info span {
+          font-weight: bold;
+}
+.confirm-btn{
+          background-color: #65B741;
+}
+.deny-btn{
+          background-color: #FF0303;       
 }

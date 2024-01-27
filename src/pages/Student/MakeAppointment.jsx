@@ -1,9 +1,29 @@
-import React from 'react'
+import { useEffect, useState } from "react";
+import AppointmentService from "../../services/appointmentService";
+import CalendarForStudents from "../../components/CalendarForStudents";
+import Header from "../../components/Header";
 
 const MakeAppointment = () => {
-  return (
-    <div>MakeAppointment</div>
-  )
-}
+  const [availableDays, setAvailableDays] = useState();
 
-export default MakeAppointment
+  useEffect(() => {
+    let appointmentService = new AppointmentService();
+    appointmentService
+      .getAvailableDays()
+      .then((response) => setAvailableDays(response.data));
+      console.log(availableDays)
+  }, []);
+
+  return (
+    <div>
+    <Header/>
+      <p>Görüşmek istediğiniz tarihi ve saati seçiniz</p>
+      <CalendarForStudents />
+      <div>
+     
+      </div>
+    </div>
+  );
+};
+
+export default MakeAppointment;
